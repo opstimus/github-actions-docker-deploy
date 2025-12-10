@@ -38,7 +38,7 @@ jobs:
 
   deploy-image:
     needs: build-image
-    uses: opstimus/github-actions-docker-deploy/.github/workflows/docker-compose-ecr.yml@DEVOPS-366-Create-ECR-Deploy-Template-and-Update-Docs
+    uses: opstimus/github-actions-docker-deploy/.github/workflows/docker-compose-ecr.yml@main
     with:
       ecr_repository: 123456789012.dkr.ecr.us-east-1.amazonaws.com/my-app
       image_tag: ${{ needs.build-image.outputs.image_tag }}
